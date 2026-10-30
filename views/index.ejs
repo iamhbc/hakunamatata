@@ -14,13 +14,14 @@
       <% for(var i=0; i < haikus.length; i++) { %>
         <img
           class="mona-images"
-          src="images/<%= haikus[i].image %>" />
+          src="/images/<%= haikus[i].image %>" alt="Octocat illustration for this haiku" />
         <div 
           class="haiku-containers">
           <p 
             class="haikus"
-          ><%- haikus[i].text %></p>
+          ><%= haikus[i].text %></p>
         </div>
       <% } %>
     </div>
+  </body>
 </html>
