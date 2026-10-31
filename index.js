@@ -1,14 +1,5 @@
-let express = require('express');
-let app = express();
-let ejs = require('ejs');
-const haikus = require('./haikus.json');
-const port = process.env.PORT || 3000;
+'use strict';
+const app = require('./app');
 
-app.use(express.static('public'))
-app.set('view engine', 'ejs');
-
-app.get('/', (req, res) => {
-  res.render('index', {haikus: haikus});
-});
-
-app.listen(port);
+// Preserve numeric ports and IIS named pipes supplied through PORT.
+app.listen(process.env.PORT || 3000);
